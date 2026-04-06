@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#060e20",
+            "error": "#ff716c",
+            "secondary-dim": "#8a4cfc",
+            "primary-container": "#00f1fe",
+            "tertiary-dim": "#f271b5",
+            "on-secondary-fixed-variant": "#6514d6",
+            "primary": "#99f7ff",
+            "inverse-on-surface": "#4d556b",
+            "on-background": "#dee5ff",
+            "surface-container-lowest": "#000000",
+            "tertiary-container": "#f673b7",
+            "secondary-container": "#6001d1",
+            "on-tertiary-fixed": "#360021",
+            "inverse-primary": "#006a70",
+            "on-error-container": "#ffa8a3",
+            "on-secondary-container": "#e1d0ff",
+            "primary-fixed-dim": "#00e2ee",
+            "on-error": "#490006",
+            "tertiary": "#ff86c3",
+            "surface-variant": "#192540",
+            "background": "#060e20",
+            "tertiary-fixed-dim": "#f976ba",
+            "surface-tint": "#99f7ff",
+            "on-tertiary": "#5f003e",
+            "on-surface-variant": "#a3aac4",
+            "surface-container-high": "#141f38",
+            "on-tertiary-fixed-variant": "#73004b",
+            "surface-container-highest": "#192540",
+            "on-primary-fixed-variant": "#006065",
+            "error-container": "#9f0519",
+            "outline-variant": "#40485d",
+            "on-primary-fixed": "#004145",
+            "on-primary": "#005f64",
+            "tertiary-fixed": "#ff8bc5",
+            "surface-bright": "#1f2b49",
+            "surface-dim": "#060e20",
+            "on-secondary-fixed": "#430097",
+            "error-dim": "#d7383b",
+            "surface-container": "#0f1930",
+            "outline": "#6d758c",
+            "inverse-surface": "#faf8ff",
+            "on-tertiary-container": "#4a002f",
+            "primary-fixed": "#00f1fe",
+            "primary-dim": "#00e2ee",
+            "secondary": "#af88ff",
+            "on-surface": "#dee5ff",
+            "on-primary-container": "#00555a",
+            "secondary-fixed-dim": "#d0b8ff",
+            "secondary-fixed": "#dcc9ff",
+            "surface-container-low": "#091328",
+            "on-secondary": "#2b0065"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #060e20;
+      background-image: 
+        radial-gradient(circle at 50% -20%, #00555a 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, #2b0065 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(15, 25, 48, 0.4);
+      backdrop-filter: blur(12px);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
+    .jelly-glow {
+      box-shadow: 0 0 20px rgba(153, 247, 255, 0.15), inset 0 0 10px rgba(153, 247, 255, 0.05);
+    }
+    .particle-dissolve {
+      opacity: 0.4;
+      filter: blur(2px) brightness(1.5);
+      mask-image: radial-gradient(circle, white 20%, transparent 70%);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#060e20]/60 backdrop-blur-xl border-b border-[#99f7ff]/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#99f7ff] transition-transform duration-300 hover:scale-105" data-icon="stars">stars</span>
+<h1 class="font-['Space_Grotesk'] tracking-widest uppercase text-sm text-[#99f7ff]">DAY 3/7</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-high px-4 py-1.5 rounded-full border border-primary/20 flex items-center gap-2 jelly-glow">
+<span class="material-symbols-outlined text-xs text-primary" data-icon="timer">timer</span>
+<span class="font-headline font-bold text-sm tracking-tight">0:45</span>
+</div>
+<div class="bg-primary/10 px-4 py-1.5 rounded-full border border-primary/30 flex items-center gap-2 jelly-glow">
+<span class="material-symbols-outlined text-xs text-primary" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-headline font-bold text-sm tracking-tight text-primary">120</span>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Grid System -->
+<div class="grid grid-cols-4 gap-4 md:gap-6">
+<!-- Row 1 -->
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-primary">H</span>
+<span class="font-label text-[10px] text-on-surface-variant tracking-tighter">HYDROGEN</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-on-surface">2</span>
+</div>
+<!-- Selected State -->
+<div class="aspect-[3/4] bg-primary/10 backdrop-blur-xl rounded-lg flex flex-col items-center justify-center border-2 border-primary shadow-[0_0_20px_rgba(153,247,255,0.4)] scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-primary">Li</span>
+<span class="font-label text-[10px] text-primary/80 tracking-tighter">LITHIUM</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-2xl font-bold text-on-surface">氦</span>
+</div>
+<!-- Row 2 -->
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-on-surface">4</span>
+</div>
+<!-- Selected State 2 -->
+<div class="aspect-[3/4] bg-primary/10 backdrop-blur-xl rounded-lg flex flex-col items-center justify-center border-2 border-primary shadow-[0_0_20px_rgba(153,247,255,0.4)] scale-105 transition-all cursor-pointer">
+<span class="font-headline text-2xl font-bold text-primary">锂</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-primary">Be</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-2xl font-bold text-on-surface">氢</span>
+</div>
+<!-- Row 3: Matched State Example -->
+<div class="aspect-[3/4] particle-dissolve rounded-lg flex flex-col items-center justify-center border border-primary/40 transition-all">
+<span class="font-headline text-3xl font-bold text-primary-container">He</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-on-surface">5</span>
+</div>
+<div class="aspect-[3/4] particle-dissolve rounded-lg flex flex-col items-center justify-center border border-primary/40 transition-all">
+<span class="font-headline text-3xl font-bold text-primary-container">2</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-primary">B</span>
+</div>
+<!-- Row 4 -->
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-2xl font-bold text-on-surface">硼</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-on-surface">6</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-primary">C</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-2xl font-bold text-on-surface">碳</span>
+</div>
+<!-- Row 5 -->
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-on-surface">7</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-primary">N</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-2xl font-bold text-on-surface">氮</span>
+</div>
+<div class="aspect-[3/4] glass-card rounded-lg flex flex-col items-center justify-center border border-outline-variant/15 jelly-glow hover:scale-105 transition-all cursor-pointer">
+<span class="font-headline text-3xl font-bold text-on-surface">1</span>
+</div>
+</div>
+<!-- Gameplay Info -->
+<div class="mt-12 text-center space-y-4">
+<p class="font-label text-primary/60 text-sm tracking-widest uppercase">Match Symbols to Atomic Numbers</p>
+<div class="flex justify-center gap-3">
+<div class="h-1 w-12 rounded-full bg-primary shadow-[0_0_8px_#99f7ff]"></div>
+<div class="h-1 w-8 rounded-full bg-primary/20"></div>
+<div class="h-1 w-8 rounded-full bg-primary/20"></div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-around items-center px-4 py-3 mx-auto max-w-md bg-[#060e20]/40 backdrop-blur-2xl rounded-full border border-[#99f7ff]/15 shadow-[0_20px_40px_rgba(153,247,255,0.08)]">
+<a class="flex items-center justify-center text-[#99f7ff]/60 w-12 h-12 hover:text-[#99f7ff] hover:drop-shadow-[0_0_10px_#99f7ff] active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+</a>
+<!-- Science is active for a chemistry game -->
+<a class="flex items-center justify-center bg-[#99f7ff] text-[#060e20] rounded-full w-12 h-12 shadow-[0_0_15px_#99f7ff] active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+</a>
+<a class="flex items-center justify-center text-[#99f7ff]/60 w-12 h-12 hover:text-[#99f7ff] hover:drop-shadow-[0_0_10px_#99f7ff] active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</nav>
+<!-- Decorative Background Elements -->
+<div class="fixed top-1/4 -left-12 w-64 h-64 bg-primary/5 blur-[100px] pointer-events-none"></div>
+<div class="fixed bottom-1/4 -right-12 w-64 h-64 bg-secondary/5 blur-[100px] pointer-events-none"></div>
+</body></html>

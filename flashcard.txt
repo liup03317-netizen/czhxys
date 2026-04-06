@@ -1,0 +1,172 @@
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#060e20",
+              "error": "#ff716c",
+              "secondary-dim": "#8a4cfc",
+              "primary-container": "#00f1fe",
+              "tertiary-dim": "#f271b5",
+              "on-secondary-fixed-variant": "#6514d6",
+              "primary": "#99f7ff",
+              "inverse-on-surface": "#4d556b",
+              "on-background": "#dee5ff",
+              "surface-container-lowest": "#000000",
+              "tertiary-container": "#f673b7",
+              "secondary-container": "#6001d1",
+              "on-tertiary-fixed": "#360021",
+              "inverse-primary": "#006a70",
+              "on-error-container": "#ffa8a3",
+              "on-error": "#490006",
+              "tertiary": "#ff86c3",
+              "surface-variant": "#192540",
+              "background": "#060e20",
+              "tertiary-fixed-dim": "#f976ba",
+              "surface-tint": "#99f7ff",
+              "on-tertiary": "#5f003e",
+              "on-surface-variant": "#a3aac4",
+              "surface-container-high": "#141f38",
+              "on-tertiary-fixed-variant": "#73004b",
+              "surface-container-highest": "#192540",
+              "on-primary-fixed-variant": "#006065",
+              "error-container": "#9f0519",
+              "outline-variant": "#40485d",
+              "on-primary-fixed": "#004145",
+              "on-primary": "#005f64",
+              "tertiary-fixed": "#ff8bc5",
+              "surface-bright": "#1f2b49",
+              "surface-dim": "#060e20",
+              "on-secondary-fixed": "#430097",
+              "error-dim": "#d7383b",
+              "surface-container": "#0f1930",
+              "outline": "#6d758c",
+              "inverse-surface": "#faf8ff",
+              "on-tertiary-container": "#4a002f",
+              "primary-fixed": "#00f1fe",
+              "primary-dim": "#00e2ee",
+              "secondary": "#af88ff",
+              "on-surface": "#dee5ff",
+              "on-primary-container": "#00555a",
+              "secondary-fixed-dim": "#d0b8ff",
+              "secondary-fixed": "#dcc9ff",
+              "surface-container-low": "#091328",
+              "on-secondary": "#2b0065"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(6, 14, 32, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .jelly-glow {
+            box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 20px rgba(153, 247, 255, 0.3);
+        }
+        .jelly-button-primary {
+            background: linear-gradient(180deg, #00f1fe 0%, #006a70 100%);
+            box-shadow: 0 8px 16px rgba(0, 241, 254, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+        }
+        .jelly-button-secondary {
+            background: rgba(25, 37, 64, 0.8);
+            border: 1px solid rgba(153, 247, 255, 0.3);
+            box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+        }
+        .atomic-card {
+            background: linear-gradient(135deg, rgba(25, 37, 64, 0.6) 0%, rgba(9, 19, 40, 0.8) 100%);
+            border: 1px solid rgba(153, 247, 255, 0.15);
+        }
+        .frosted-window {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen selection:bg-primary selection:text-on-primary-container overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#060e20]/60 backdrop-blur-xl">
+<div class="flex items-center gap-2 text-[#99f7ff] active:scale-95 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+<span class="font-['Space_Grotesk'] tracking-wider uppercase text-[10px] sm:text-xs">DAY 3/7: MOLECULAR BONDS</span>
+</div>
+<div class="font-['Space_Grotesk'] font-bold text-[#99f7ff] drop-shadow-[0_0_10px_rgba(153,247,255,0.5)]">
+            HYDROGEN_UNIT
+        </div>
+<div class="text-[#99f7ff] hover:opacity-80 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</div>
+</header>
+<main class="relative h-screen w-full flex flex-col items-center justify-between px-6 pt-24 pb-12 overflow-hidden">
+<!-- Cosmic Background Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]"></div>
+<img alt="Cosmic Map" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCobGun1sRZYea-7cXbcEd8q-C10eP39wgmNWxjHXAvHMitgXISuXjVoA8Jh8_HJnL03ow_VlREDf9TbHY3Mn9usKu6BVPcDfErsxduR94Ryl1rwXlCbqLpHfgfiWcV0YGxImqUUfR7cjP6_G6_lfcMHrrqTI6Zm2jYWF9okRAjGyRgwcXnMyM2aELkxYGtuQwQ7gzZfAUKRaWQIn0E7vPeIj-BxH8YWUQI5rjOXbR7WTxn54e5GlC10hh_MESIZsW6Rg1JnjHeNWg"/>
+</div>
+<!-- Flashcard Learning Room Content -->
+<section class="relative z-20 flex flex-col items-center max-w-sm w-full h-full justify-center gap-8">
+<!-- 3D Memory Card -->
+<div class="atomic-card w-full aspect-[4/5] rounded-[2.5rem] p-8 flex flex-col items-center justify-between shadow-[0_40px_80px_rgba(0,0,0,0.5)] border-t border-white/10 relative overflow-hidden group">
+<!-- Background Decoration: Subtle Atomic Model -->
+<div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+<img alt="Atomic Model Background" class="w-full h-full object-contain scale-125 rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1FqQOV5EHrhQat8KxmuP405TZLC-Plyz_Ngiq3d7x6439WY5N2KQYovxO-QqVESYEsdPEhUU1VE0k7tVoyGB4vGAP9ZDUZm4NLGYiBMUBBLYN9uooDiRW7m6Bi677_m6T8HmLVzNlplqOk-qgGRT8J6sUq50nddLXMxUZmOoIli0s7u1c6gMU6MxfyBtokX9Dc_qFeiktcgM14I4iYlUpGjXTaxvR2lyRwWI0Z5BuK3GReC5gAl_cI6oR2ZUJqQ4PXtob27FMM9E"/>
+</div>
+<!-- TOP PORTION: Corners & Illustration -->
+<div class="w-full flex justify-between items-start z-30">
+<div class="flex flex-col items-start">
+<span class="text-on-surface-variant font-headline text-[10px] tracking-widest opacity-60 uppercase">Atomic No.</span>
+<span class="text-primary font-headline text-4xl font-bold">1</span>
+</div>
+<!-- Frosted Window with Matte Claymation -->
+<div class="w-32 h-32 rounded-3xl frosted-window flex items-center justify-center overflow-hidden p-4 group-hover:scale-105 transition-transform duration-500 shadow-xl">
+<img alt="Hydrogen Claymation Water Droplet" class="w-full h-full object-contain drop-shadow-2xl" onerror="this.src='https://api.iconify.design/fluent-emoji:droplet.svg?color=%2399f7ff'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB266v58yE1hG0v4i375qNqfBqI9S6w_GfC4oT8uG2mH-v9K89-R9B_O5yU8r2z-yF8V2qS7Q=s1024"/>
+</div>
+<div class="flex flex-col items-end text-right">
+<span class="text-on-surface-variant font-headline text-[10px] tracking-widest opacity-60 uppercase">Valency</span>
+<span class="text-secondary font-headline text-4xl font-bold">+1</span>
+</div>
+</div>
+<!-- MIDDLE: Symbol & Name -->
+<div class="flex flex-col items-center z-30 mb-4">
+<h1 class="text-8xl font-headline font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-[#99f7ff] tracking-tighter drop-shadow-[0_0_20px_rgba(153,247,255,0.4)]">H</h1>
+<h2 class="text-2xl font-headline font-medium text-[#99f7ff] tracking-[0.2em] uppercase mt-2">Hydrogen</h2>
+</div>
+</div>
+<!-- BOTTOM: Jelly Buttons -->
+<div class="w-full flex flex-col gap-4 z-30">
+<button class="jelly-button-primary w-full py-5 rounded-full font-headline font-bold text-on-primary-container text-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 group">
+                    GOT IT, LET'S CHALLENGE!
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="bolt">bolt</span>
+</button>
+<button class="jelly-button-secondary w-full py-4 rounded-full font-headline font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 active:scale-[0.98] transition-all">
+                    BACK
+                </button>
+</div>
+</section>
+</main>
+<!-- Interactive Navigation Hint -->
+<div class="fixed bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-headline tracking-[0.3em] text-white/20 uppercase">
+        Swipe for next element
+    </div>
+</body></html>
